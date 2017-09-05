@@ -12,6 +12,10 @@
 		08870A0B1F5C0849000A5314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08870A091F5C0849000A5314 /* Main.storyboard */; };
 		08870A0D1F5C0849000A5314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08870A0C1F5C0849000A5314 /* Assets.xcassets */; };
 		08870A101F5C0849000A5314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08870A0E1F5C0849000A5314 /* LaunchScreen.storyboard */; };
+		08870A181F5C0920000A5314 /* CafeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08870A171F5C0920000A5314 /* CafeTableViewController.swift */; };
+		08870A1A1F5D386E000A5314 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08870A191F5D386E000A5314 /* Cafe.swift */; };
+		08870A1C1F5D4F88000A5314 /* CafeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08870A1B1F5D4F88000A5314 /* CafeDetailViewController.swift */; };
+		08870A1F1F5E7AD0000A5314 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08870A1E1F5E7AD0000A5314 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		08870A0C1F5C0849000A5314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08870A0F1F5C0849000A5314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08870A111F5C0849000A5314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08870A171F5C0920000A5314 /* CafeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeTableViewController.swift; sourceTree = "<group>"; };
+		08870A191F5D386E000A5314 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		08870A1B1F5D4F88000A5314 /* CafeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailViewController.swift; sourceTree = "<group>"; };
+		08870A1E1F5E7AD0000A5314 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08870A1F1F5E7AD0000A5314 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				08870A041F5C0849000A5314 /* CoffeeShopKH */,
 				08870A031F5C0849000A5314 /* Products */,
+				08870A1D1F5E7AD0000A5314 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +66,23 @@
 			children = (
 				08870A051F5C0849000A5314 /* AppDelegate.swift */,
 				08870A071F5C0849000A5314 /* ViewController.swift */,
+				08870A171F5C0920000A5314 /* CafeTableViewController.swift */,
+				08870A191F5D386E000A5314 /* Cafe.swift */,
 				08870A091F5C0849000A5314 /* Main.storyboard */,
+				08870A1B1F5D4F88000A5314 /* CafeDetailViewController.swift */,
 				08870A0C1F5C0849000A5314 /* Assets.xcassets */,
 				08870A0E1F5C0849000A5314 /* LaunchScreen.storyboard */,
 				08870A111F5C0849000A5314 /* Info.plist */,
 			);
 			path = CoffeeShopKH;
+			sourceTree = "<group>";
+		};
+		08870A1D1F5E7AD0000A5314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08870A1E1F5E7AD0000A5314 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +117,11 @@
 				TargetAttributes = {
 					08870A011F5C0849000A5314 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08870A1A1F5D386E000A5314 /* Cafe.swift in Sources */,
 				08870A081F5C0849000A5314 /* ViewController.swift in Sources */,
 				08870A061F5C0849000A5314 /* AppDelegate.swift in Sources */,
+				08870A181F5C0920000A5314 /* CafeTableViewController.swift in Sources */,
+				08870A1C1F5D4F88000A5314 /* CafeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
