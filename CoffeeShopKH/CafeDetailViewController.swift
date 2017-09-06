@@ -13,6 +13,8 @@ class CafeDetailViewController: UIViewController,MKMapViewDelegate {
     
     var cafedetail: Cafe!
     
+ 
+    @IBOutlet weak var cafeMapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var wifiLabel: UILabel!
     @IBOutlet weak var seatLabel: UILabel!
@@ -22,16 +24,7 @@ class CafeDetailViewController: UIViewController,MKMapViewDelegate {
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
     
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation){
-            
-        let annotation = MKPointAnnotation()
-        annotation.title = cafedetail.cafename
-        annotation.subtitle = cafedetail.cafeaddress
-        annotation.coordinate = CLLocationCoordinate2D(latitude: Double(cafedetail.cafeLatitude)!, longitude: Double(cafedetail.cafeLongitude)!)
-        mapView.addAnnotation(annotation)
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.location!.coordinate, 1000, 1000)
-        mapView.region = region
-    }
+    
     
     func updateUI(){
         navigationItem.title = cafedetail.cafename
@@ -43,6 +36,15 @@ class CafeDetailViewController: UIViewController,MKMapViewDelegate {
         cheapLabel.text = String(cafedetail.cafecheap)
         musicLabel.text = String(cafedetail.cafemusic)
         urlLabel.text = cafedetail.cafeweburl
+        
+        let annotation = MKPointAnnotation()
+        annotation.title = cafedetail.cafename
+        annotation.subtitle = cafedetail.cafeaddress
+        annotation.coordinate = CLLocationCoordinate2D(latitude: Double(cafedetail.cafeLatitude)!, longitude: Double(cafedetail.cafeLongitude)!)
+        let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate , 10000, 10000)
+        cafeMapView.region = region
+        cafeMapView.addAnnotation(annotation)
+        
     }
     
     override func viewDidLoad() {

@@ -187,9 +187,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqI-G2-Pmd">
                                 <rect key="frame" x="10" y="64" width="355" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BCP-p7-gx0" id="iW8-xH-1fF"/>
-                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,6 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="S1s-h6-JMT" id="R76-1Y-kSk"/>
+                        <outlet property="cafeMapView" destination="uqI-G2-Pmd" id="yv7-bb-0Bo"/>
                         <outlet property="cheapLabel" destination="N2X-lN-d6P" id="Ngv-mf-Uvr"/>
                         <outlet property="musicLabel" destination="iYU-km-Q7K" id="870-jv-mv7"/>
                         <outlet property="quietLabel" destination="6Fb-H6-NBQ" id="bgT-B8-g50"/>
